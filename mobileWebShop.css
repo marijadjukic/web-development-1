@@ -1,0 +1,126 @@
+/*Primary selectors */
+body{
+	background-color:lightgray;
+}
+
+td{
+	padding: 8px;
+}
+
+
+/*IDs and classes */
+#container{
+	width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#header{
+	background-color: #8600b3;
+	color: white;
+	text-align: center;
+	font-family: sans-serif;
+	padding: 2px;
+	margin-bottom: 10px;
+	font-size: 20px;
+}
+
+.content{
+	width: 1180px;
+	background-color: #8600b3;
+	font-family: sans-serif;
+	padding: 10px;
+}
+
+
+#order{
+	width: 400px;
+	float: left;
+	background-color: white;	
+}
+
+#main{
+	width: 770px;
+	background-color: white;
+	float:right;
+}
+
+
+#ordertable{
+	border: 1px solid black;
+	width: 380px;
+	padding: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+}
+
+#ordertable td:nth-child(odd){
+	font-weight: bold;
+	font-size: 12px;
+}
+
+#maintable{
+	width:750px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.label_row{
+	font-size: 22px;
+	font-weight: bold;
+	color: #3399ff;
+	text-align: center;
+}
+
+.label_row td{
+	border-bottom: 1px solid black;
+	border-top: 1px solid black;
+	border-left: 15x solid white;
+	border-right: 15px solid white;
+}
+
+.price_row{
+	font-size: 18px;
+	color: #8600b3;
+	text-align: center;
+}
+
+
+.price_row td:hover {
+	background-color:#f5f5f5;
+}
+
+.footer {
+	clear: both;
+	color: white;
+	font-family: sans-serif;
+
+}
+
+#social{
+	width: 500px;
+	padding-left: 15px;
+	float:left;
+}
+
+#copy{
+	float: right;
+	width: 400px;
+	text-align: right;
+}
+
+.Button{
+	margin: auto;
+	text-align: right;
+	width:150px;
+}
+
+.buttonBG{
+	display: inline; /* the default for span */
+    	padding: 10px;  
+   	background-color: lightgray; 
+	border-radius: 10px; 
+	font-family: Corbel, sans-serif;
+	font-size: 25px;
+}

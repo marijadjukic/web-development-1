@@ -1,0 +1,72 @@
+body{
+	background-image: url("sailor-moon.jpg");
+	background-size: 1600px;
+	background-repeat: no-repeat;
+}
+
+#container{
+	
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#header{
+	background-color: #282828;
+	color: #FFE004;
+	text-align: center;
+	font-family: Cooper Black, sans-serif;
+	padding: 2px;
+	margin-bottom: 10px;
+	font-size: 20px;
+}
+
+div{
+	color: white;
+}
+
+.content{
+	background-color: black;
+	font-family: Century, sans-serif;
+	padding: 15px;
+}
+
+table{
+	border: 2px solid #282828;
+}
+
+td{
+	border: 2px solid #282828;
+	padding: 8px;
+}
+
+a{
+	color:yellow;
+}
+
+tr:nth-child(even){
+	font-size: 13px;
+}
+
+tr:nth-child(odd){
+	font-weight: bold;
+	background-color: #282828;
+}
+
+.footer {
+	font-family: Century, sans-serif;
+
+}
+
+#social{
+	float:left;
+	width: 500px;
+	padding-left: 15px;
+}
+
+#copy{
+	float:right;
+	width: 400px;
+	text-align: right;
+	padding-right: 15px;
+}

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Web Shop</title>
+	<script type="text/javascript" src="mobileWebShop.js"></script>
+	<link rel="stylesheet" type="text/css" href="mobileWebShop.css">
+	
+</head>
+
+<body>
+
+	<div id="container">
+		<div id="header">
+			<H1>MOBILE WEB SHOP</H1>
+		</div>
+		<form>
+		<div class="content">
+		<!-- div with order table, button and payment info. Payment info displays when button is clicked -->
+			<div id="order">
+				<table id="ordertable">
+					<tr>
+						<td class="label_col">First Name:*</td>
+						<td class="input_col"><input name="firstName" id="firstName" type="text" onblur="validateFirstName();" placeholder="First Name" required></td>
+						<td class="feedback_col"><span id="firstNamePrompt"></span></td>
+					</tr>
+					<tr>
+						<td class="label_col">Last Name:*</td>
+						<td class="input_col"><input name="lastName" id="lastName" type="text" onblur="validateLastName();" placeholder="Last Name" required></td>
+						<td class="feedback_col"><span id="lastNamePrompt"></span></td>
+					</tr>
+					<tr>
+						<td class="label_col">e-mail:*</td>
+						<td class="input_col"><input name="email" id="email" type="text" onblur="validateEMail();" placeholder="example@som.com" required></td>
+						<td class="feedback_col"><span id="emailPrompt"></span></td>
+					</tr>
+					<tr>
+						<td class="label_col">Delivery Address*</td>
+						<td class="input_col"><input name="address" id="address" type="text" onblur="validateAddress();" placeholder="46 Harley Street" required></td>
+						<td class="feedback_col"><span id="addressPrompt"></span></td>
+					</tr>
+					<tr>
+						<td class="label_col">City*</td>
+						<td class="input_col"><input name="city" id="city" type="text" onblur="validateCity();" placeholder="London" required></td>
+						<td class="feedback_col"><span id="cityPrompt"></span></td>
+					</tr>
+					<tr>
+						<td class="label_col">Country*</td>
+						<td class="input_col"><input name="country" id="country" type="text" onblur="validateCountry();" placeholder="England" required></td>
+						<td class="feedback_col"><span id="countryPrompt"></span></td>
+					</tr>
+					<tr>
+						<td class="label_col">Date of Buying:*</td>
+						<td class="input_col"><input type="date" name="buying" placeholder="mm/dd/yyyy" required></td>
+						<td class="feedback_col"><span>&nbsp;</span></td>
+					</tr>
+					<tr>
+						<td class="label_col">Card Number*</td>
+						<td class="input_col"><input name="cardNumber" id="cardNumber" type="text" placeholder="1234 5678 9101 1121" required></td>
+						<td class="feedback_col"><span>&nbsp;</span></td>
+					</tr>
+					<tr>
+						<td class="label_col">Date of Expiry:*</td>
+						<td class="input_col">
+						<select name="month" id="month" style="width:50px" required>  
+							<option value="month">01</option>
+							<option value="month">02</option> 
+							<option value="month">03</option>
+							<option value="month">04</option>
+							<option value="month">05</option>
+							<option value="month">06</option>
+							<option value="month">07</option>
+							<option value="month">08</option> 
+							<option value="month">09</option> 
+							<option value="month">10</option>
+							<option value="month">11</option>
+							<option value="month">12</option>         
+						</select>
+						<select name="year" id="year" style="width:100px" required>  
+							<option value="year">2018</option>
+							<option value="year">2019</option> 
+							<option value="year">2020</option>
+							<option value="year">2021</option>
+							<option value="year">2022</option>
+							<option value="year">2023</option>
+							<option value="year">2024</option>
+							<option value="year">2025</option> 
+							<option value="year">2026</option> 
+							<option value="year">2027</option>
+							<option value="year">2028</option>        
+						</select>
+						</td>
+						<td class="feedback_col"><span>&nbsp;</span></td>
+					</tr>
+					<tr>
+						<td class="label_col">Card Type:*</td>
+						<td class="input_col">
+						<select name="cardType" id="cardType" style="width:100px" required>  
+							<option value="cardr">Visa</option>
+							<option value="card">MesterCard</option> 
+							<option value="card">Maestro</option>
+							<option value="card">Diners</option>
+							<option value="card">Amex</option>        
+						</select>
+						</td>
+						<td class="feedback_col"><span>&nbsp;</span></td>
+					</tr>
+					<tr>
+						<td class="Button" id="Button" colspan="3"><input type="button" class="buttonBG" onclick="displayBuying();" value="Buy"/></td>
+					</tr>
+				</table>
+				<p style="font-size:20px; color:#8600b3; margin:10px; padding:5px 0px 0px 0px;"> <strong> PAYMENT: </strong></p>
+				<p id="buyingConfirm" style="font-size:15px; color:#3399ff; padding:1px 0px 1px 20px; background-color:#e0e0eb; margin:10px;">&nbsp;</p>
+			</div>
+			<!-- main div with table with mobile phones and input radio for price -->
+			<div id="main">
+				<p style="font-size:40px; padding:20px; background-color: #c2c2d6; margin:10px; color: white; text-align:center; font-weight:bold;"> Choose Your <span style="color:#3399ff;">MOBILE</span></p>
+				<table id="maintable">
+					<tr class="label_row">
+						<td>Samsung Galaxy J3</td>
+						<td>Huawei Honor 7 Lite</td>
+						<td>iPhone SE 16GB</td>
+					</tr>
+					<tr class="image_row">
+						<td><img src="https://www.laptopsdirect.ie/Images/SM-J320FZDNBTU_1_3213552_LargeProductImage.jpg?width=450&height=450&v=2" style="width:200px;"/></td>
+						<td><img src="https://static3.nordic.pictures/5662846-large_default/huawei-honor-7-lite-hall.jpg" style="width:200px;"/></td>
+						<td><img src="https://i5.walmartimages.com/asr/c73ff456-0585-4d0e-a930-93ad9ce6a245_1.c7133f82fd365cadac7db872dc4448da.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF" style="width:200px;"/></td>
+					</tr>
+					<tr class="price_row">
+						<td><input type="radio" name="price" value="150">&euro;150</td>
+						<td><input type="radio" name="price" value="190">&euro;190</td>
+						<td><input type="radio" name="price" value="250">&euro;250</td>
+					</tr>
+
+				</table>
+
+				<table id="maintable">
+					<tr class="label_row">
+						<td>Nokia 7 Plus 64GB</td>
+						<td>HTC U11 32GB</td>
+						<td>Apple iPhone 8 64GB</td>
+					</tr>
+					<tr class="image_row">
+						<td><img src="http://www.csmobiles.com/WebRoot/StoreES3/Shops/78317249/5AD6/42E4/F904/E3FB/C1F9/0A0C/6D00/9CC4/nokia-7-plus_desk.png" style="width:200px;"/></td>
+						<td><img src="https://image1280.macovi.de/images/product_images/1280/1215525_0__39241628_9753863163.jpg" style="width:200px;"/></td>
+						<td><img src="https://cdn.shopify.com/s/files/1/1902/5493/products/ip8red_1024x1024.jpg?v=1523702818" style="width:200px;"/></td>
+					</tr>
+					<tr class="price_row">
+						<td><input type="radio" name="price" value="290">&euro;290</td>
+						<td><input type="radio" name="price" value="340">&euro;340</td>
+						<td><input type="radio" name="price" value="830">&euro;830</td>
+					</tr>
+
+				</table>
+			</div>
+			
+		</div>
+		</form>
+		<!-- footer of web page with socials icons and copyrigt -->
+		<div class="footer">
+			<div id = "social">
+			<a href="http://www.google.com"><img src="https://cdn6.aptoide.com/imgs/d/2/e/d2efaa3fed8d0750a87bf61e1fb5684f_icon.png?w=240" style="width:40px;height:40px;"/></a>
+			<a href="http://www.facebook.com"><img src="http://icons.iconarchive.com/icons/yootheme/social-bookmark/256/social-facebook-box-blue-icon.png" style="width:40px;height:40px;"/></a>
+			<a href="http://www.linkedin.com"><img src="http://www.frontavenue.com/wp-content/uploads/Apps-Linkedin-icon.png" style="width:40px;height:40px;"/></a>
+			<a href="https://www.instagram.com"><img src="https://vignette.wikia.nocookie.net/battlefordreamislandfanfiction/images/6/61/Instagram-logo-transparent-background_zps6befc220.gif/revision/latest/scale-to-width-down/474?cb=20150507210219" style="width:40px;height:40px;"/></a>
+			<a href="https://www.twitter.com"><img src="http://www.transparentpng.com/download/twitter/twitter-style-icons-png-6.png" style="width:40px;height:40px;"/></a>
+			<a href="https://www.youtube.com"><img src="https://cdn0.iconfinder.com/data/icons/web-social-and-folder-icons/512/YouTube.png" style="width:40px;height:40px;"/></a>
+			<a href="https://www.skype.com"><img src="https://cdn.icon-icons.com/icons2/1231/PNG/512/1492693528-10-skype_83576.png" style="width:40px;height:40px;"/></a>
+			</div>
+			<div id="copy">
+			Copyright &copy; 2018 Marija Djukic.
+			</div>
+		</div>
+	
+	</div>
+</body>
+
+</html>
