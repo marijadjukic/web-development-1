@@ -1,0 +1,83 @@
+/*Primary selectors */
+body{
+	background-image: url("travel33.png");
+	background-size: 1450px;
+	background-repeat: no-repeat;
+	background-color: #FFF;
+	color: #000;
+	font-family: Corbel, sans-serif;
+	font-size: large;
+}
+
+table{
+	width: 500px;
+	border-collapse: collapse;
+	table-layout: fixed;
+	border-radius: 10px;
+	background-color: #F9C72F;
+	font-family: Corbel, sans-serif;
+	font-size: 17px;
+}
+
+td{
+	vertical-align: top;
+	padding: 7px;
+	word-wrap: break-word;
+}
+
+/*IDs and classes */
+#container{
+	width: 1300px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 20px;
+}
+
+#header{
+	background-color: #312E8D;
+	width: 1500px;
+	margin-left: auto;
+	margin-right: auto;
+	color: white;
+	text-align: center;
+	font-family: Cooper Black, sans-serif;
+	padding: 2px;
+	margin-bottom: 10px;
+	font-size: 20px;
+}
+
+#bookingConfirm{
+	color: #287A01;
+	font-weight: bold;
+}
+
+.label_col{
+	text-align: right;
+}
+
+.input_col{
+	text-align: left;
+}
+
+.feedback_col{
+	text-align: left;
+	vertical-align: middle;
+	color: #58595A;
+	font-size: small;
+}
+
+.Button{
+	margin: auto;
+	text-align: right;
+	width:50px;
+}
+
+.buttonBG{
+	display: inline; /* the default for span */
+    padding: 7px;  
+    background-color: #2675F4; 
+	border-radius: 10px; 
+	color: white;
+	font-family: Corbel, sans-serif;
+	font-size: 30px;
+}

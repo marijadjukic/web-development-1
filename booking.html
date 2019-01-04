@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="booking.css">
+		<title>Booking</title>
+		<script type="text/javascript" src="booking.js"></script>
+	</head>
+
+	<body>
+		<div id="header">
+			<h1>Book a hotel</h1>
+		</div>
+		<form action="#">
+			<div id="container">
+				<table border="0">
+					<tr>
+						<td class="label_col">e-mail:*</td>
+						<td class="input_col"><input name="email" id="email" type="text" placeholder="example@something.com" required></td>
+						<td class="feedback_col"><span id="emailPrompt">example@something.com</span></td>
+					</tr>
+					<tr>
+						<td class="label_col">Destination:*</td>
+						<td class="input_col"><input name="destination" id="destination" type="text" onblur="validateDestination();" placeholder="Zagreb" required></td>
+						<td class="feedback_col"><span id="destinationPrompt">City</span></td>
+					</tr>
+					<tr>
+						<td class="label_col">Check-in Date:*</td>
+						<td class="input_col"><input type="date" name="checkin" required></td>
+						<td class="feedback_col">dd/mm/yyyy</span></td>
+					</tr>
+					<tr>
+						<td class="label_col">Check-out Date:*</td>
+						<td class="input_col"><input type="date" name="checkout" required></td>
+						<td class="feedback_col">dd/mm/yyyy</td>
+					</tr>
+					<tr>
+						<td class="label_col">Adults:*</td>
+						<td class="input_col"><input name="adults" id="adults" type="number" min="1" max="10" onblur="validateAdults();" style="width:100px" placeholder="2 adults" required></td>
+						<td class="feedback_col"><span id="adultsPrompt">1&ndash;10</span></td>
+					</tr>
+					<tr>
+						<td class="label_col">Children:</td>
+						<td class="input_col"><input name="children" id="children" type="number" min="0" max="5" onblur="validateChildren();" style="width:100px" placeholder="No children"></td>
+						<td class="feedback_col"><span id="childrenPrompt">0&ndash;5</span></td>
+					</tr>
+					<tr>
+						<td class="label_col">Rooms:</td>
+						<td class="input_col"><select name="rooms" id="rooms" style="width:100px">  
+							<option value="india">1 room</option>  
+							<option value="pakistan">2 rooms</option>  
+							<option value="africa">3 rooms</option>  
+							<option value="china">4 rooom</option>  
+							<option value="other">5 rooms</option>
+						</select></td>
+						<td class="feedback_col">1&ndash;5</span></td>
+					</tr>
+					<tr>
+						<td class="label_col">I'm traveling for work?</td>
+						<td class="input_col"><input type="radio" name="answer" value="yes" checked>Yes<br>
+						<input type="radio" name="answer" value="no">No</td>
+						<td class="feedback_col">&nbsp;</span></td>
+					</tr>
+					<tr>
+						<td class="Button" id="Button" colspan="3"><button class="buttonBG" onclick="calcBooking();">Search</span></td>
+					</tr>
+				</table>
+				<span id="bookingConfirm">&nbsp;</span>
+			</div>
+			
+			<!--
+			<input type="submit" value="submit"/>
+			-->
+		</form>
+	
+	</body>
+
+</html>
